@@ -1,0 +1,15 @@
+version: '1.0'
+services:
+#Api
+  mlops3:
+    build:
+      context: ./
+      dockerfile: dockerfile
+    image: globb/mlops:latest
+    container_name: 'mlops3'
+    restart: always
+    ports:
+      - "8002:8000"
+    networks:
+      - default
+
